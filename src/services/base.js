@@ -1,6 +1,7 @@
 import axios from 'axios';
-require('dotenv').config()
-
+import dotenv from 'dotenv'
+dotenv.config()
+console.log(process.env)
 export const http = axios.create({
-    baseURL: process.env.SERVER_URL
+    baseURL: process.env.REACT_APP_SERVER_URL
 });
