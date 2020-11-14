@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { http } from './base'
+import { http, SERVER_URL } from './base'
 
 const suburlSearch = "/search"
 const suburlPDF = "/pdf"
@@ -18,7 +18,7 @@ class SearchService {
         return Axios(
             {
                 method: 'get',
-                url: 'http://localhost:4000' + suburlPDF + "&n=" + name,
+                url: SERVER_URL + suburlPDF + "&n=" + name,
                 responseType: 'blob'
             }
         );
@@ -26,3 +26,4 @@ class SearchService {
 }
 
 export default new SearchService();
+
